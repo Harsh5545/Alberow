@@ -63,7 +63,7 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <Button className="mt-6 w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500" asChild>
+                <Button className="mt-3 w-full bg-gradient-to-r flex justify-center items-center from-blue-500 via-purple-500 to-pink-500" asChild>
                   <Link href={service.link}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
                 </Button>
               </CardContent>
