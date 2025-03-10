@@ -53,7 +53,7 @@ export default function AdminSidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isActive("/admin")} tooltip="Dashboard">
-                  <Link href="/admin">
+                  <Link href="/admin/dashboard">
                     <Home className="h-4 w-4" />
                     <span>Dashboard</span>
                   </Link>
