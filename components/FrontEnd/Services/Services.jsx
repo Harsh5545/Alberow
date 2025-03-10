@@ -7,7 +7,7 @@ const services = [
   {
     title: "Web Development",
     description: "Custom websites and web applications built with modern technologies.",
-    image: "/images/web-development.jpg",
+    image: "./assets/AlberowWebsite.webp",
     link: "/services/web-development",
     icon: <Code className="h-8 w-8 text-primary" />,
     features: ["Next.js & React", "E-commerce Solutions", "CMS Integration"]
@@ -15,7 +15,7 @@ const services = [
   {
     title: "UI/UX Design",
     description: "User-centered design that enhances user experience and engagement.",
-    image: "/images/uiux-design.jpg",
+    image: "./assets/AlberowUi.webp",
     link: "/services/ui-ux-design",
     icon: <Palette className="h-8 w-8 text-primary" />,
     features: ["User Research", "Wireframing", "Prototyping"]
@@ -23,7 +23,7 @@ const services = [
   {
     title: "Digital Marketing",
     description: "Strategic marketing to increase your online visibility and drive growth.",
-    image: "/images/digital-marketing.jpg",
+    image: "./assets/AlberowSocialMM.webp",
     link: "/services/digital-marketing",
     icon: <Globe className="h-8 w-8 text-primary" />,
     features: ["SEO", "Content Marketing", "Social Media"]
