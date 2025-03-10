@@ -125,16 +125,16 @@ export default function WorkShowcase() {
           </TabsContent>
         </Tabs>
         
-        <div className="text-center mt-12">
+        <div className="text-center flex items-center justify-center ">
           <Button 
             variant="outline" 
             size="lg"
-            className="group"
+            className="group p-4"
             asChild
           >
             <Link href="/work">
               View All Projects
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className=" h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
         </div>

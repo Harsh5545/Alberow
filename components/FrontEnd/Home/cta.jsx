@@ -27,13 +27,13 @@ export default function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button variant="outline" size="lg" className="group" asChild>
+            <Button variant="outline" size="lg" className="group p-2" asChild>
               <Link href="/contact">
                 Contact Us
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button variant="default" size="lg" className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-opacity" asChild>
+            <Button variant="default" size="lg" className="p-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-opacity" asChild>
               <Link href="/work">
                 View Our Work
               </Link>

@@ -82,7 +82,7 @@ export default function Map() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className=" gap-8">
           <div className="lg:col-span-2">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -126,7 +126,7 @@ export default function Map() {
               )}
             </div>
 
-            <div className="hidden md:flex flex-col space-y-4">
+            {/* <div className="hidden md:flex flex-col space-y-4">
               {locations.map((location, index) => (
                 <motion.div
                   key={index}
@@ -149,8 +149,8 @@ export default function Map() {
                   </Card>
                 </motion.div>
               ))}
-            </div>
-
+            </div> */}
+{/* 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -194,7 +194,7 @@ export default function Map() {
               </div>
 
               <Button className="w-full mt-6">Get Directions</Button>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>

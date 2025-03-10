@@ -56,7 +56,7 @@ export default function OurMission() {
           <div className="relative">
             <div className="aspect-square rounded-xl overflow-hidden shadow-xl border border-border/50 gradient-border">
               <img
-                src="/placeholder.svg?height=800&width=800&text=Our+Mission"
+                src="./assets/AlberowAbout.webp"
                 alt="Our Mission"
                 className="w-full h-full object-cover"
               />

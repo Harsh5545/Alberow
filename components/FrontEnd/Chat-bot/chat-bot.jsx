@@ -58,7 +58,7 @@ export default function ChatBot() {
         onClick={() => setIsOpen(true)}
         className={cn(
           "fixed bottom-6 right-6 z-50 rounded-full shadow-lg w-14 h-14 p-0",
-          "bg-gradient-to-r from-blue-500 to-purple-500 hover:opacity-90 transition-opacity",
+          "bg-gradient-to-r from-blue-500 flex justify-center items-center to-purple-500 hover:opacity-90 transition-opacity",
           isOpen && "hidden"
         )}
         aria-label="Open chat"

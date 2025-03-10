@@ -7,21 +7,21 @@ const services = [
   {
     title: "Web Development",
     description: "Custom websites and web applications built with modern technologies.",
-    image: "/placeholder.svg?height=400&width=600&text=Web+Development",
+    image: "./assets/AlberowWebsite.webp",
     link: "/services/web-development",
     features: ["Responsive Design", "Next.js & React", "E-commerce Solutions", "CMS Integration"]
   },
   {
     title: "UI/UX Design",
     description: "User-centered design that enhances user experience and engagement.",
-    image: "/placeholder.svg?height=400&width=600&text=UI/UX+Design",
+    image: "./assets/AlberowUi.webp",
     link: "/services/ui-ux-design",
     features: ["User Research", "Wireframing", "Prototyping", "Usability Testing"]
   },
   {
     title: "Digital Marketing",
     description: "Strategic marketing to increase your online visibility and drive growth.",
-    image: "/placeholder.svg?height=400&width=600&text=Digital+Marketing",
+    image: "./assets/AlberowSocialMM.webp",
     link: "/services/digital-marketing",
     features: ["SEO", "Content Marketing", "Social Media", "Email Campaigns"]
   }
@@ -82,7 +82,7 @@ export default function Services() {
           <Button 
             variant="default" 
             size="lg"
-            className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-opacity"
+            className="bg-gradient-to-r p-4 from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-opacity"
             asChild
           >
             <Link href="/services">
