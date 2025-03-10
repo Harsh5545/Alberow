@@ -30,7 +30,14 @@ const navItems = [
     ],
   },
   { name: "Blog", path: "/blog" },
-  { name: "Contact", path: "/contact" },
+
+  { name: "Services", dropdown: true, subItems: [
+      { name: "Web Development", path: "/services/web-development" },
+      { name: "UI/UX Design", path: "/services/ui-ux-design" },
+      { name: "SEO Optimization", path: "/services/seo-optimization" },
+      { name: "Social Media Marketing", path: "/services/social-media-marketing" }
+    ]},
+
 ]
 
 export default function Navbar() {
@@ -156,6 +163,35 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
+
+          <ul className="flex space-x-8">
+  {navItems.map((item) => (
+    <li key={item.name} className="relative">
+      {item.dropdown ? (
+        <div className="group">
+          <button className="text-foreground/80 hover:text-foreground transition-colors relative py-2">
+            {item.name}
+          </button>
+          <ul className="absolute left-0 top-full hidden group-hover:block bg-background/90 shadow-md rounded-lg mt-2 py-2 w-48">
+            {item.subItems.map((sub) => (
+              <li key={sub.name}>
+                <Link href={sub.path} className="block px-4 py-2 hover:bg-muted rounded-md">
+                  {sub.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <Link href={item.path} className="text-foreground/80 hover:text-foreground transition-colors py-2">
+          {item.name}
+        </Link>
+      )}
+    </li>
+  ))}
+</ul>
+
+=======
             <ul className="flex space-x-8">
               {navItems.map((item, index) => (
                 <li key={item.name} className="relative group">
@@ -247,7 +283,17 @@ export default function Navbar() {
               >
                 Get Started
               </Button>
+
+            )}
+            <Link href="/contact">
+            <Button
+              variant="default"
+              className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-opacity"
+            >
+              Get Started
+            </Button></Link>
             </motion.div>
+
           </div>
 
           {/* Mobile Navigation Toggle */}
