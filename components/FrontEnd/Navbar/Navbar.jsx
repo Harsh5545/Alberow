@@ -16,7 +16,7 @@ const navItems = [
   { name: "Blog", path: "/blog" },
   { 
     name: "Services", 
-    subItems: [
+    submenu: [
       { name: "Web Development", path: "/services/web-development" },
       { name: "UI/UX Design", path: "/services/ui-ux-design" },
       { name: "SEO Optimization", path: "/services/seo-optimization" },
@@ -24,8 +24,6 @@ const navItems = [
     ]
   }
 ];
-
-
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -148,73 +146,78 @@ export default function Navbar() {
             </Link>
           </div>
 
-         
-    {/* Desktop Navigation */}
-<nav className="hidden md:block">
-  <ul className="flex space-x-8">
-    {navItems.map((item, index) => (
-      <li key={item.name} className="relative group">
-        {item.subItems ? (
-          <>
-            {/* Services dropdown button */}
-            <button
-              className="text-foreground/80 hover:text-foreground transition-colors relative py-2 flex items-center"
-              onClick={() => toggleSubmenu(index)}
-              onMouseEnter={() => setOpenSubmenu(index)}
-              onMouseLeave={() => setOpenSubmenu(null)}
-            >
-              {item.name}
-              <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
-            </button>
-
-            {/* Dropdown Menu */}
-            <AnimatePresence>
-              {openSubmenu === index && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute left-0 mt-1 w-48 rounded-md bg-background/95 backdrop-blur-md shadow-lg border border-border/30 overflow-hidden z-50"
-                  onMouseEnter={() => setOpenSubmenu(index)}
-                  onMouseLeave={() => setOpenSubmenu(null)}
-                >
-                  <div className="py-2">
-                    {item.subItems.map((subItem) => (
-                      subItem.path ? ( // ✅ Only render <Link> if path exists
-                        <Link
-                          key={subItem.name}
-                          href={subItem.path}
-                          className="block px-4 py-2 text-sm hover:bg-primary/10 transition-colors"
-                        >
-                          {subItem.name}
-                        </Link>
-                      ) : (
-                        <div key={subItem.name} className="px-4 py-2 text-muted-foreground">
-                          {subItem.name}
-                        </div>
-                      )
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </>
-        ) : (
-          item.path && (
-            <Link
-              href={item.path}
-              className="text-foreground/80 hover:text-foreground transition-colors relative py-2 block"
-            >
-              {item.name}
-            </Link>
-          )
-        )}
-      </li>
-    ))}
-  </ul>
-</nav>
-
+          {/* Desktop Navigation */}
+          <nav className="hidden md:block">
+            <ul className="flex space-x-8">
+              {navItems.map((item, index) => (
+                <li key={item.name} className="relative group">
+                  {item.submenu ? (
+                    <>
+                      <button
+                        className={cn(
+                          "text-foreground/80 hover:text-foreground transition-colors relative py-2 flex items-center",
+                          pathname.startsWith(item.path) && "text-foreground font-medium"
+                        )}
+                        onClick={() => toggleSubmenu(index)}
+                        onMouseEnter={() => setOpenSubmenu(index)}
+                        onMouseLeave={() => setOpenSubmenu(null)}
+                      >
+                        {item.name}
+                        <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+                      </button>
+                      <AnimatePresence>
+                        {(openSubmenu === index || pathname.startsWith(item.path)) && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 10 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute left-0 mt-1 w-48 rounded-md bg-background/95 backdrop-blur-md shadow-lg border border-border/30 overflow-hidden z-50"
+                            onMouseEnter={() => setOpenSubmenu(index)}
+                            onMouseLeave={() => setOpenSubmenu(null)}
+                          >
+                            <div className="py-2">
+                              {item.submenu.map((subItem) => (
+                                subItem.path && (
+                                  <Link
+                                    key={subItem.name}
+                                    href={subItem.path}
+                                    className="block px-4 py-2 text-sm hover:bg-primary/10 transition-colors"
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                )
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  ) : (
+                    item.path && (
+                      <Link
+                        href={item.path}
+                        className={cn(
+                          "text-foreground/80 hover:text-foreground transition-colors relative py-2 block",
+                          pathname === item.path &&
+                            "text-foreground font-medium after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-500 after:to-purple-500"
+                        )}
+                      >
+                        {item.name}
+                        {pathname === item.path && (
+                          <motion.span
+                            className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500"
+                            layoutId="navbar-underline"
+                            transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
+                          />
+                        )}
+                      </Link>
+                    )
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           <div className="hidden md:flex items-center space-x-4">
             {mounted && (

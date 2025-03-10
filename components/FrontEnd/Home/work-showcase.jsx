@@ -125,7 +125,7 @@ export default function WorkShowcase() {
           </TabsContent>
         </Tabs>
         
-        <div className="text-center flex items-center justify-center ">
+        <div className="text-center pt-8 flex items-center justify-center ">
           <Button 
             variant="outline" 
             size="lg"
