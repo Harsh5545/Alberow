@@ -1,18 +1,26 @@
-import ContactHero from "@/components/FrontEnd/contact/ContactHero"
-import ContactForm from "@/components/FrontEnd/contact/ContactForm"
-import ContactInfo from "@/components/FrontEnd/contact/ContactInfo"
-import Map from "@/components/FrontEnd/contact/Map"
 
-export default function ContactPage() {
+import MouseEffect from '../../../hooks/MouseEffect';
+import ScrollReveal from '../../../hooks/ScrollReveal';
+import Hero from '../../../components/FrontEnd/Home/Hero';
+import Features from '../../../components/FrontEnd/Home/features';
+import Services from '../../../components/FrontEnd/Home/services';
+import WorkShowcase from '../../../components/FrontEnd/Home/work-showcase';
+import Stats from '../../../components/FrontEnd/Home/stats';
+import Testimonials from '../../../components/FrontEnd/Home/testimonials';
+import CTA from '../../../components/FrontEnd/Home/cta'; 
+export default function Home() {
   return (
     <>
-      <ContactHero />
-      <div className="container mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <ContactForm />
-        <ContactInfo />
-      </div>
-      <Map />
+      <MouseEffect  />
+      <ScrollReveal>
+        <Hero />
+        <Features />
+        <Services />
+        <WorkShowcase />
+        <Stats />
+        <Testimonials />
+        <CTA />
+      </ScrollReveal>
     </>
-  )
+  );
 }
-
