@@ -38,7 +38,7 @@ export default function AdminSidebar() {
   return (
     <SidebarProvider>
       <Sidebar variant="sidebar" collapsible="icon">
-        <SidebarHeader className="flex justify-between items-center py-3">
+        <SidebarHeader className="flex mt-20 justify-between items-center py-3">
           <Link href="/admin" className="flex items-center px-2">
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white mr-3">
               A
@@ -53,7 +53,7 @@ export default function AdminSidebar() {
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isActive("/admin")} tooltip="Dashboard">
-                  <Link href="/admin">
+                  <Link href="/admin/dashboard">
                     <Home className="h-4 w-4" />
                     <span>Dashboard</span>
                   </Link>

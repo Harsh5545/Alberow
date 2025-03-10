@@ -15,7 +15,7 @@ export default function AboutHero() {
           <div className="mt-12 relative max-w-5xl mx-auto">
             <div className="aspect-[16/9] rounded-xl overflow-hidden shadow-2xl border border-border/50">
               <img
-                src="/placeholder.svg?height=720&width=1280&text=Our+Team"
+                src="./assets/AlberowTeam.webp"
                 alt="Alberow Team"
                 className="w-full h-full object-cover"
               />

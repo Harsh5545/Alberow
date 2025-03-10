@@ -1,10 +1,9 @@
 import { Inter } from 'next/font/google';
-import "./globals.css";
+import "../globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from '../components/FrontEnd/Navbar/Navbar';
-import Footer from '../components/FrontEnd/Footer/Footer';
-import ChatBot from '../components/FrontEnd/Chat-bot/chat-bot';
-
+import Navbar from "@/components/FrontEnd/Navbar/navbar";
+import Footer from "@/components/FrontEnd/Footer/footer";
+import ChatBot from "@/components/FrontEnd/chat-bot/chat-bot";
 
 const inter = Inter({ subsets: ["latin"] });
 

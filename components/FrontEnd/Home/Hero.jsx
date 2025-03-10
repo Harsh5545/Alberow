@@ -116,14 +116,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               size="lg"
-              className="gap-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-opacity"
+              className="gap-2 flex p-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-opacity"
               asChild
             >
               <Link href="/contact">
                 Get Started <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" className="p-2 text-center flex justify-center items-center" variant="outline" asChild>
               <Link href="/work">
                 View Our Work
               </Link>
@@ -133,7 +133,7 @@ export default function Hero() {
           <div className="mt-16 relative w-full max-w-5xl">
             <div className="aspect-video rounded-xl overflow-hidden shadow-2xl border border-border/50 bg-card gradient-border">
               <img
-                src="/placeholder.svg?height=720&width=1280&text=Alberow+Digital+Agency"
+                src="./assets/AlberowHome.webp"
                 alt="Alberow Digital Agency Dashboard"
                 className="w-full h-full object-cover"
               />
