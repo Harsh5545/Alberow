@@ -113,7 +113,7 @@ export default function Hero() {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl">
             We are a cutting-edge web development and marketing agency that creates exceptional digital experiences to help businesses thrive in the digital world.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-row gap-2 md:gap-4">
             <Button
               size="lg"
               className="gap-2 flex p-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 transition-opacity"

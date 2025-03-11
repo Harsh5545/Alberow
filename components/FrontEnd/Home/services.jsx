@@ -54,8 +54,8 @@ export default function Services() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-white text-foreground mb-2">{service.title}</h3>
+                  <p className="text-muted-foreground text-slate-100">{service.description}</p>
                 </div>
               </div>
               <CardContent className="p-6">
@@ -67,7 +67,7 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" className="w-full group" asChild>
+                <Button variant="outline" className="flex p-2 justify-center items-center w-full group" asChild>
                   <Link href={service.link}>
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
