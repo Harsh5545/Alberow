@@ -1,4 +1,4 @@
-import { ArrowRight, Code, Palette, Globe, Shield } from 'lucide-react';
+import { ArrowRight, Code, Palette, Globe, Search, ShoppingCart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
@@ -7,15 +7,15 @@ const services = [
   {
     title: "Web Development",
     description: "Custom websites and web applications built with modern technologies.",
-    image: "/images/web-development.jpg",
-    link: "/services/web-development",
+    image: "./assets/AlberowWebsite.webp",
+    link: "/services/website-development",
     icon: <Code className="h-8 w-8 text-primary" />,
     features: ["Next.js & React", "E-commerce Solutions", "CMS Integration"]
   },
   {
     title: "UI/UX Design",
     description: "User-centered design that enhances user experience and engagement.",
-    image: "/images/uiux-design.jpg",
+    image: "./assets/AlberowUi.webp",
     link: "/services/ui-ux-design",
     icon: <Palette className="h-8 w-8 text-primary" />,
     features: ["User Research", "Wireframing", "Prototyping"]
@@ -23,13 +23,28 @@ const services = [
   {
     title: "Digital Marketing",
     description: "Strategic marketing to increase your online visibility and drive growth.",
-    image: "/images/digital-marketing.jpg",
+    image: "./assets/AlberowSocialMM.webp",
     link: "/services/digital-marketing",
     icon: <Globe className="h-8 w-8 text-primary" />,
     features: ["SEO", "Content Marketing", "Social Media"]
+  },
+  {
+    title: "SEO",
+    description: "Optimize your website to rank higher on search engines and attract more traffic.",
+    image: "./assets/AlberowSeo.webp",
+    link: "/services/seo",
+    icon: <Search className="h-8 w-8 text-primary" />,
+    features: ["Keyword Research", "On-page Optimization", "Link Building"]
+  },
+  {
+    title: "E-commerce",
+    description: "Build and manage your online store with our comprehensive e-commerce solutions.",
+    image: "./assets/AlberowEcommerce.webp",
+    link: "/services/ecommerce",
+    icon: <ShoppingCart className="h-8 w-8 text-primary" />,
+    features: ["Store Setup", "Payment Integration", "Inventory Management"]
   }
 ];
-
 export default function Services() {
   return (
     <section className="py-24 bg-gradient-to-b from-background via-muted/20 to-background">

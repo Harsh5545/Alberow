@@ -27,7 +27,7 @@ export default function CTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button variant="outline" size="lg" className="group p-2" asChild>
+            <Button variant="outline" size="lg" className="flex items-center justify-center p-2 group" asChild>
               <Link href="/contact">
                 Contact Us
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

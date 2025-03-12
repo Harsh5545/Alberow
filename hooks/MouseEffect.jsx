@@ -47,7 +47,7 @@ export default function MouseEffect() {
   return (
     <>
       <div
-        className="cursor-dot"
+        className="cursor-dot md:block hidden"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
